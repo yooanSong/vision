@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+	
+	<!--동일한 코드가 있으면 namespace에서 util을 설정해 뽑아 낼 수 있다 -->
+	<!-- bean을 재사용하기 위해서 util을 사용해서 밖으로 뺀것 -->
+	<util:list id="kkk"> 
+		<ref bean="another"></ref>
+		<ref bean="another2"></ref>
+		<ref bean="another"></ref>
+		<ref bean="another2"></ref>
+	</util:list>
+
+
+
+	<bean id="another" class="com.test.AnotherBean">
+		<property name="username" value="홍길동" />
+		<property name="age" value="20" />
+	</bean>
+
+	<bean id="another2" class="com.test.AnotherBean">
+		<property name="username" value="이순신" />
+		<property name="age" value="20" />
+	</bean>
+
+
+	<bean id="echo" class="com.test.EchoBean">
+		<property name="xxx" ref="kkk" />
+	</bean>
+
+	<bean id="echo2" class="com.test.EchoBean">
+		<property name="xxx">
+			<ref bean="kkk" />
+		</property>
+
+	</bean>
+
+
+
+
+</beans>

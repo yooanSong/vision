@@ -1,0 +1,17 @@
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class EchoBeanTest {
+
+	public static void main(String[] args) {
+		// echo.xml ==> configuration 파일 읽고 관리하는
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
+		
+		
+		ctx.getEnvironment().setActiveProfiles("dev");
+		ctx.load("classpath:echoDev.xml","classpath:echoProd.xml");
+		ctx.refresh();
+
+		
+
+	}
+}

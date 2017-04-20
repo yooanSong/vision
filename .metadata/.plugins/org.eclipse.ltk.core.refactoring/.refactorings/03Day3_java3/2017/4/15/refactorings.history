@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 packages to &apos;03Day3_Spring3/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;03Day3_java3&apos;&#x0D;&#x0A;- Destination element: &apos;03Day3_Spring3/src/main/java&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     03Day3_java3/src/com.dao&#x0D;&#x0A;     03Day3_java3/src/com.dto&#x0D;&#x0A;     03Day3_java3/src/com.service" description="Copy packages" destination="=03Day3_Spring3/src\/main\/java" element1="/src&lt;com.dao" element2="/src&lt;com.dto" element3="/src&lt;com.service" flags="589830" fragments="3" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1492070900292" version="1.0"/>
+</session>

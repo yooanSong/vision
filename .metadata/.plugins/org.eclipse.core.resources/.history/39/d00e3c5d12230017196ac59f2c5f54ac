@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- I18N id="messageSource" 정해져 있다-->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>classpath:hello</value>
+			</list>
+		</property>
+		<property name="cacheSeconds" />
+	</bean>
+
+
+
+	<!-- 빈 등록 -->
+	<bean id="xxx" class="com.test.EchoBean" scope="prototype" /> <!--고정값이 singleton이다 -->
+	<!-- 어플리케이션당 하나씩만 만들어 서비스 하겠다 -->
+
+</beans>

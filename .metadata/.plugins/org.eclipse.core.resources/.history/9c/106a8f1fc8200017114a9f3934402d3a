@@ -1,0 +1,22 @@
+package com.dao;
+
+import org.mybatis.spring.SqlSessionTemplate;
+
+public class DeptDAO {
+	
+	private SqlSessionTemplate template;
+
+	public void setTemplate(SqlSessionTemplate template) {
+		this.template = template;
+	}
+	
+	public void inser(){
+		
+	}
+	
+	public void select(){
+		
+	}
+	
+
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 빈 등록 -->
+	<bean id="xxx" class="com.test.EchoBean">
+		<property name="mesg" value="홍길동" /> <!--EchoBean에서 setMesg메소드의 변수 , value=문자열을같은 기본데이터 -->
+		<!-- <property name="age" value="10" /> --> <!--생성자 부르는거 -->
+		<constructor-arg name="age" value="10" />
+	</bean>
+	<bean id="yyy" class="com.test.EchoBean"/>
+	
+
+</beans>

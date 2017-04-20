@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<!-- <bean
+		class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer"> 
+		// 아래 bean과 EchoBean을 서로 연결시켜주기 위해서 타입을지정할때 Api에서 인터페이스를 implement 받아온다 		
+		
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+			</list>
+		</property>
+		//값을 넣어주기 위해 property를 사용하는데 name에 locations와 location 에서 여러개 
+		넣어줄거니깐 locations를 사용하고 , list를 사용한다 
+	</bean> -->
+	
+	<context:property-placeholder location="classpath:*.properties"/> 
+	<!-- 위에꺼는 기니깐 이걸 더 권장해서 사용한다   -->
+
+
+	<bean id="echo" class="com.test.EchoBean">
+		<property name="driver" value="${jdbc.driver}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="userid" value="${jdbc.userid}" />
+		<property name="passwd" value="${jdbc.passwd}" />
+	</bean>
+
+</beans>

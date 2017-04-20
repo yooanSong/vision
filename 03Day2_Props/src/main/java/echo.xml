@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="echo" class="com.test.EchoBean">
+		<property name="xxx">
+			<props>
+			<prop key="one">홍길동</prop> <!--속성쓰는 란이 없으니 밖에다가 쓰면됨   -->
+			<prop key="two">이순신</prop>
+			<prop key="three">유관순</prop>
+			</props>
+		</property>
+
+	</bean>
+
+
+
+
+</beans>

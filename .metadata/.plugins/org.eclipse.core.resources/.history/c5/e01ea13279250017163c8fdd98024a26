@@ -1,0 +1,12 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller 
+public class TestController {
+	
+	public String xxxx(){
+		return "WEB-INF/view/hello.jsp"; //리턴해주는 String은 view이름이다 
+	}
+
+}

@@ -1,0 +1,23 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller 
+public class TestController {
+	
+	@RequestMapping("/xxx") //http://localhost:8090/app/xxx
+	public String xxxx(){ 
+		System.out.println("xxxx");
+		return "WEB-INF/view/hello.jsp"; 
+		//리턴해주는 String은 view이름이다
+		//view resolver를 등록안했으니깐 위치를 다 알려준다 
+	}
+	
+	@RequestMapping("/yyy") //http://localhost:8090/app/yyy
+	public String yyy(){
+		System.out.println("yyyy");
+		return "WEB-INF/view/hello.jsp"; 
+	}
+
+}

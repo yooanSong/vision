@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+	<util:map id="kkk">
+		<entry key="one">
+			<ref bean="another" />
+		</entry>
+		<entry key="two" value-ref="another2" />
+	</util:map>
+
+
+
+	<bean id="another" class="com.test.AnotherBean">
+		<property name="username" value="홍길동" />
+		<property name="age" value="20" />
+	</bean>
+
+	<bean id="another2" class="com.test.AnotherBean">
+		<property name="username" value="이순신" />
+		<property name="age" value="20" />  <!-- value => 속성값으로 설정하겠다 -->
+	</bean>
+
+
+	<!-- 설정하는 방법 2가지 1.value => 속성값으로 설정하겠다 2. 태그 -->
+
+	<bean id="echo" class="com.test.EchoBean">
+		<property name="xxx">
+			<ref bean="kkk"/>
+		</property>
+
+	</bean>
+
+
+
+
+</beans>
