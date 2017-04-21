@@ -1,0 +1,41 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class TestController {
+
+	// http://localhost:8090/app/aaa
+	// http://localhost:8090/app/aaa.아무거나
+	// http://localhost:8090/app/aaa/
+	@RequestMapping("/aaa")
+	public String xxxx() {
+		System.out.println("aaa");
+		return "hello";
+	}
+
+	// http://localhost:8090/app/bbb/
+	// http://localhost:8090/app/bbb/아무거나
+	// http://localhost:8090/app/bbb/*
+	@RequestMapping("/bbb/*")
+	public String bbb() {
+		System.out.println("bbb");
+		return "hello";
+	}
+
+	// http://localhost:8090/app/ccc
+	@RequestMapping("/ccc*")
+	public String ccc() {
+		System.out.println("ccc");
+		return "hello";
+	}
+
+	// http://localhost:8090/app/ccc  **: 디렉토리
+	@RequestMapping("/ddd/**/fff")
+	public String ddd() {
+		System.out.println("ddd");
+		return "hello";
+	}
+
+}

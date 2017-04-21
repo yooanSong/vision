@@ -1,0 +1,16 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller 
+public class TestController {
+	
+	@RequestMapping("/aaa") //http://localhost:8090/app/xxx
+	public String xxxx(){ 
+		System.out.println("aaa");
+		return "hello"; 
+	}
+	
+	
+}
